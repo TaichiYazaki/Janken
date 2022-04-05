@@ -10,13 +10,14 @@
 
 <body>
     <h1>Stream Apiを利用したじゃんけんゲーム〜3連勝を目指せ〜</h1>
-    <form th:action="@{/janken1}" method="post" th:object="${jankenForm}">
+    <form th:action="@{/final}" method="post" th:object="${jankenForm}">
         <input type="radio" th:field="*{janken}" value="0">グー
-        <input type="radio" th:field="*{janken}" value="1" >チョキ
-        <input type="radio" th:field="*{janken}" value="2" >パー
+        <input type="radio" th:field="*{janken}" value="1">チョキ
+        <input type="radio" th:field="*{janken}" value="2">パー
         <input type="submit">
     </form>
     <p th:text="${resultMsg}"></p>
+    <p th:text="${jankenCount2}"></p>
 </body>
 
 </html>
